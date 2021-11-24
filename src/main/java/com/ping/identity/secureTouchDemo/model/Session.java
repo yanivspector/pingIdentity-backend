@@ -10,17 +10,18 @@ public class Session {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer Id;
+
   private Integer ordinal;
   private Integer sessionId;
   private String username;
-  private boolean authenticated;
-  private boolean fraud;
-  private boolean emulator;
+  private Boolean authenticated;
+  private Boolean fraud;
+  private Boolean emulator;
 
 
   public Session(){}
 
-  public Session(Integer ordinal, Integer sessionId, String username, boolean authenticated, boolean fraud, boolean emulator) {
+  public Session(Integer ordinal, Integer sessionId, String username, Boolean authenticated, Boolean fraud, Boolean emulator) {
     this.ordinal = ordinal;
     this.sessionId = sessionId;
     this.username = username;
@@ -45,18 +46,41 @@ public class Session {
     return username;
   }
 
-  public boolean isAuthenticated() {
+  public Boolean isAuthenticated() {
     return authenticated;
   }
 
-  public boolean isFraud() {
+  public Boolean isFraud() {
     return fraud;
   }
 
-  public boolean isEmulator() {
+  public Boolean isEmulator() {
     return emulator;
   }
 
+  public void setOrdinal(Integer ordinal) {
+    this.ordinal = ordinal;
+  }
+
+  public void setSessionId(Integer sessionId) {
+    this.sessionId = sessionId;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public void setAuthenticated(Boolean authenticated) {
+    this.authenticated = authenticated;
+  }
+
+  public void setFraud(Boolean fraud) {
+    this.fraud = fraud;
+  }
+
+  public void setEmulator(Boolean emulator) {
+    this.emulator = emulator;
+  }
 
 
 

@@ -12,54 +12,64 @@ public class Counter {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
-  private Integer ordinal;
-  private Integer sessionId;
-  private String username;
-  boolean authenticated;
-  boolean fraud;
-  boolean emulator;
+  Integer threats;
+  Integer total;
+  Integer authenticated;
+  Integer scored;
 
-  public Counter(){};
-
-  public Counter(Integer ordinal, Integer sessionId, String username, boolean authenticated, boolean fraud, boolean emulator) {
-    this.ordinal = ordinal;
-    this.sessionId = sessionId;
-    this.username = username;
-    this.authenticated = authenticated;
-    this.fraud = fraud;
-    this.emulator = emulator;
+  public Counter() {
   }
+
+  public Counter( Integer threats, Integer total, Integer authenticated, Integer scored) {
+    this.threats = threats;
+    this.total = total;
+    this.authenticated = authenticated;
+    this.scored = scored;
+  }
+
 
   public Integer getId() {
     return id;
   }
 
-  public Integer getOrdinal() {
-    return ordinal;
+  public void setId(Integer id) {
+    this.id = id;
   }
 
-  public Integer getSessionId() {
-    return sessionId;
+  public Integer getThreats() {
+    return threats;
   }
 
-  public String getUsername() {
-    return username;
+  public void setThreats(Integer threats) {
+    this.threats = threats;
   }
 
-  public boolean isAuthenticated() {
+  public Integer getTotal() {
+    return total;
+  }
+
+  public void setTotal(Integer total) {
+    this.total = total;
+  }
+
+  public Integer getAuthenticated() {
     return authenticated;
   }
 
-  public boolean isFraud() {
-    return fraud;
+  public void setAuthenticated(Integer authenticated) {
+    this.authenticated = authenticated;
   }
 
-  public boolean isEmulator() {
-    return emulator;
+  public Integer getScored() {
+    return scored;
   }
+
+  public void setScored(Integer scored) {
+    this.scored = scored;
+  }
+
 
 }
-
 
 
 
