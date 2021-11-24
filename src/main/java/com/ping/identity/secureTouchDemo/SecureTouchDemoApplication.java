@@ -20,19 +20,11 @@ public class SecureTouchDemoApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(SecureTouchDemoApplication.class);
 
-
-
-	@Autowired
-	DaoService daoService;
-
-
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(SecureTouchDemoApplication.class, args);
 		checkDBTableConnection(applicationContext);
 
 	}
-
-
 
 	private static void checkDBTableConnection(ConfigurableApplicationContext applicationContext){
 		try {
