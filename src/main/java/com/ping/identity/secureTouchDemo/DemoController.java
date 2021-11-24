@@ -5,6 +5,7 @@ import com.ping.identity.secureTouchDemo.model.Counter;
 import com.ping.identity.secureTouchDemo.model.Session;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,11 +33,13 @@ public class DemoController {
 
 
   //When the Mapping back an Object it is automatically converted to 'Json' by the Dispatcher Servlet
+  @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping("/SecuredTouch/rest/v2/counters")
   public Counter getCounters() throws IOException {
     return getDaoService().getCountersFromDB();
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping("/SecuredTouch/rest/v2/sessions")
   public List<Session> getSessionList(){
     return getDaoService().getAllSessionsFromDB();
