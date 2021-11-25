@@ -15,10 +15,10 @@ create table sessions
 );
 
 INSERT INTO sessions (id ,ordinal, sessionId, username, authenticated ,fraud ,emulator)
-VALUES (1,0, 35454545, 'Mark Otto', false,true,false);
-INSERT INTO sessions VALUES (2,1, 35455745, 'Jacob Throton', true,true,false);
-INSERT INTO sessions VALUES (3,2, 36455745, 'Israel Isaeli', false,false,true);
-INSERT INTO sessions VALUES (4,3, 37455745, 'Ariel Arieli', true,false,true);
+VALUES (1,0, 12121212, 'Mark Otto', false,true,false);
+INSERT INTO sessions VALUES (2,1, 34343434, 'Jacob Throton', true,true,false);
+INSERT INTO sessions VALUES (3,2, 21212121, 'Israel Isaeli', false,false,true);
+INSERT INTO sessions VALUES (4,3, 89898989, 'Ariel Arieli', true,false,true);
 
 
 
