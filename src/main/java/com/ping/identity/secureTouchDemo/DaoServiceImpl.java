@@ -36,7 +36,7 @@ public class DaoServiceImpl implements DaoService {
   private void generateRandomCountersAndSaveOnDB() {
     Iterable<Counter> counters = counterRepository.findAll();
     counters.forEach(counter -> {
-      Integer newThreats = getRandomNumber(1,50);
+      Integer newThreats = getRandomNumber(90,200);
       Integer newTotalSession = getRandomNumber(100,300);
       Integer newAuthenticatedUsers = getRandomNumber(50,150);
       Integer newScoredSessions = getRandomNumber(60,80);
